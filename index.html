@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <title>
+      PHARO SHAVE | Men's Shaving Cream — Smooth & Hydrating Formula
+    </title>
+    <!-- Google Fonts + Font Awesome -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="logo">PHARO SHAVE</div>
+      <div class="hamburger" id="hamburger">
+        <i class="fas fa-bars"></i>
+      </div>
+      <div class="nav-links" id="navLinks">
+        <a href="#how-it-works">How it Works</a>
+        <a href="#ingredients">Key Ingredients</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#shop" class="btn-gold" style="padding: 0.6rem 1.5rem"
+          >Shop Now</a
+        >
+      </div>
+    </nav>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero" id="hero">
+        <div class="hero-bg-parallax" id="parallaxBg"></div>
+        <div class="container hero-content">
+          <div class="hero-text">
+            <h1 class="gold-text">
+              PHARO SHAVE<br /><span style="font-size: 2rem"
+                >Shaving Cream</span
+              >
+            </h1>
+            <h2 style="font-size: 1.6rem; font-weight: 400">
+              Smooth & Hydrating Formula • For Sensitive Skin<br />Net Weight:
+              50g
+            </h2>
+            <div class="hero-buttons">
+              <a href="#claim" class="btn-gold">Shave Like a King 👑</a>
+              <a href="#ritual-section" class="btn-outline">Learn More</a>
+            </div>
+          </div>
+          <div class="hero-image">
+            <img src="22.jpeg" alt="PHARO SHAVE shaving cream" />
+          </div>
+        </div>
+      </section>
+
+      <!-- HORIZONTAL IMAGE SLIDER (7 images from your collection) -->
+      <section class="gallery-slider-section" id="product-gallery">
+        <div class="container">
+          <div class="section-title">
+            <h2 class="gold-text">The PHARO Treasury</h2>
+            <p>
+              Witness the artifact in its glory — from golden tube to ritual
+              texture
+            </p>
+          </div>
+          <div class="slider-container">
+            <button class="slider-btn prev-btn" id="prevSlide">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <div class="slider-track-wrapper">
+              <div class="slider-track" id="sliderTrack">
+                <div class="slide-item">
+                  <img
+                    src="1.jpeg"
+                    alt="PHARO SHAVE tube"
+                    onerror="
+                      this.src =
+                        'https://placehold.co/600x500/2B3A2B/D4AF37?text=Image+1'
+                    "
+                  />
+                </div>
+                <div class="slide-item">
+                  <img
+                    src="2.jpeg"
+                    alt="Cream texture"
+                    onerror="
+                      this.src =
+                        'https://placehold.co/600x500/3E2E2A/E8C87A?text=Image+2'
+                    "
+                  />
+                </div>
+                <div class="slide-item">
+                  <img
+                    src="3.jpeg"
+                    alt="Lathering process"
+                    onerror="
+                      this.src =
+                        'https://placehold.co/600x500/2A3A28/C9A94E?text=Image+3'
+                    "
+                  />
+                </div>
+                <div class="slide-item">
+                  <img
+                    src="4.jpeg"
+                    alt="Packaging details"
+                    onerror="
+                      this.src =
+                        'https://placehold.co/600x500/1F2C1C/D4AF37?text=Image+4'
+                    "
+                  />
+                </div>
+                <div class="slide-item">
+                  <img
+                    src="5.jpeg"
+                    alt="Ingredients natural"
+                    onerror="
+                      this.src =
+                        'https://placehold.co/600x500/3B2D24/F0CF6E?text=Image+5'
+                    "
+                  />
+                </div>
+                <div class="slide-item">
+                  <img
+                    src="6.jpeg"
+                    alt="Smooth glide shave"
+                    onerror="
+                      this.src =
+                        'https://placehold.co/600x500/2F3E2A/C9B36B?text=Image+6'
+                    "
+                  />
+                </div>
+                <div class="slide-item">
+                  <img
+                    src="7.jpeg"
+                    alt="Shave like a king"
+                    onerror="
+                      this.src =
+                        'https://placehold.co/600x500/41332A/E5BD5E?text=Image+7'
+                    "
+                  />
+                </div>
+              </div>
+            </div>
+            <button class="slider-btn next-btn" id="nextSlide">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+          <div class="slider-dots" id="sliderDots"></div>
+        </div>
+      </section>
+
+      <!-- BEFORE & AFTER Comparison Slider (using local images 8.jpeg and 9.jpeg) -->
+      <section class="before-after-section">
+        <div class="container">
+          <div class="section-title">
+            <h2 class="gold-text">Transformation Unveiled</h2>
+            <p>
+              Drag the handle to reveal the royal difference — sensitive dry
+              skin vs. PHARO SHAVE hydration
+            </p>
+          </div>
+          <div class="comparison-container">
+            <div class="comparison-image" id="comparisonImage">
+              <img
+                src="8.jpeg"
+                alt="Before skin condition"
+                class="comparison-before"
+                onerror="
+                  this.src =
+                    'https://placehold.co/900x500/5A4A3A/AB8E5C?text=BEFORE:+Irritated+Sensitive+Skin'
+                "
+              />
+              <div class="comparison-after-wrapper" id="afterWrapper">
+                <img
+                  src="9.jpeg"
+                  alt="After smooth skin"
+                  class="comparison-after"
+                  onerror="
+                    this.src =
+                      'https://placehold.co/900x500/2C4430/D4AF37?text=AFTER:+Hydrated+Smooth+Skin'
+                  "
+                />
+              </div>
+              <div class="comparison-handler" id="dragHandler">
+                <div class="handler-line"></div>
+                <div class="handler-circle">
+                  <i class="fas fa-arrows-alt-h"></i>
+                </div>
+              </div>
+            </div>
+            <p class="drag-hint">
+              <i class="fas fa-hand-peace"></i> Drag left/right to see the PHARO
+              SHAVE effect
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURES Section (Why Pharo Shave?) -->
+      <section class="features" id="how-it-works">
+        <div class="container">
+          <div class="section-title">
+            <h2 class="gold-text">Why Pharo Shave?</h2>
+            <p>
+              Premium formula designed for sensitive skin & irritation-free
+              shave
+            </p>
+          </div>
+          <div class="cards-grid">
+            <div class="feature-card" data-scroll>
+              <i class="fas fa-leaf"></i>
+              <h3>Enriched with Aloe Vera</h3>
+              <p>Deep hydration & natural soothing to calm razor burns.</p>
+            </div>
+            <div class="feature-card" data-scroll>
+              <i class="fas fa-flask"></i>
+              <h3>Panthenol & Allantoin</h3>
+              <p>
+                Powerful healing complex that repairs micro-cuts and reduces
+                redness.
+              </p>
+            </div>
+            <div class="feature-card" data-scroll>
+              <i class="fas fa-hand-holding-heart"></i>
+              <h3>Soothes Skin Irritation</h3>
+              <p>
+                Ideal for extra-sensitive skin, providing a protective barrier.
+              </p>
+            </div>
+            <div class="feature-card" data-scroll>
+              <i class="fas fa-feather-alt"></i>
+              <h3>Smooth Glide Shave</h3>
+              <p>
+                Luxurious lather ensures razor glides effortlessly, preventing
+                nicks.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- INGREDIENTS Showcase -->
+      <section class="ingredients" id="ingredients">
+        <div class="container">
+          <div class="section-title">
+            <h2 class="gold-text">Sacred Blend — Back Panel</h2>
+            <p>Clean, skin-loving actives for the modern king</p>
+          </div>
+          <div class="ingredients-list-panel">
+            <div class="ingredients-grid-detail">
+              <span><i class="fas fa-tint"></i> Aqua</span>
+              <span><i class="fas fa-mortar-board"></i> Stearic Acid</span>
+              <span><i class="fas fa-leaf"></i> Aloe Vera Extract</span>
+              <span><i class="fas fa-capsules"></i> Panthenol</span>
+              <span><i class="fas fa-shield-alt"></i> Allantoin</span>
+              <span><i class="fas fa-wind"></i> Menthol</span>
+              <span><i class="fas fa-seedling"></i> Shea Butter</span>
+              <span><i class="fas fa-spa"></i> Fragrance</span>
+            </div>
+            <p class="ingredient-description">
+              Pharo Shave is a premium shaving cream designed to provide a
+              smooth and irritation‑free shaving experience. Enriched with
+              soothing and hydrating ingredients to protect your skin and
+              enhance comfort during shaving.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- RITUAL SECTION (How to use) -->
+      <section class="ritual" id="ritual-section">
+        <div class="container">
+          <div class="section-title">
+            <h2 class="gold-text">How to Use — Royal Ritual</h2>
+            <p>Follow the steps of the Pharaohs for supreme glide</p>
+          </div>
+          <div class="steps">
+            <div class="step-item">
+              <div class="step-num">1</div>
+              <i class="fas fa-hand-peace"></i>
+              <h3>Apply</h3>
+              <p>Apply a small amount on wet skin</p>
+            </div>
+            <div class="step-item">
+              <div class="step-num">2</div>
+              <i class="fas fa-hand-holding-heart"></i>
+              <h3>Massage</h3>
+              <p>Massage to create rich lather</p>
+            </div>
+            <div class="step-item">
+              <div class="step-num">3</div>
+              <i class="fas fa-razor"></i>
+              <h3>Shave & Rinse</h3>
+              <p>Shave and rinse thoroughly</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TRUST / REVIEWS -->
+      <section class="trust" id="reviews">
+        <div class="container">
+          <div class="stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i
+            ><i class="fas fa-star"></i><i class="fas fa-star"></i
+            ><i class="fas fa-star"></i>
+          </div>
+          <h3>Loved by modern warriors</h3>
+          <div class="testimonials">
+            <div class="testimonial">
+              “The Aloe + Panthenol combo saved my sensitive neck! No more razor
+              burn.” <br />— Omar S.
+            </div>
+            <div class="testimonial">
+              “Finally a shaving cream that actually soothes irritation. Shave
+              Like a King indeed.” <br />— James K.
+            </div>
+            <div class="testimonial">
+              “Smooth glide is real. Egyptian quality at its finest.”<br />—
+              Karim L.
+            </div>
+          </div>
+          <div class="warnings-storage">
+            <div class="info-card">
+              <i class="fas fa-exclamation-triangle"></i>
+              <strong>Warnings:</strong> For external use only • Avoid contact
+              with eyes • Keep out of reach of children
+            </div>
+            <div class="info-card">
+              <i class="fas fa-box-open"></i> <strong>Storage:</strong> Store in
+              a cool, dry place away from direct sunlight
+            </div>
+            <div class="info-card">
+              <i class="fas fa-industry"></i> <strong>Made in Egypt</strong> •
+              Batch No: __ / MFG: __ / EXP: __
+            </div>
+          </div>
+          <div class="badges">
+            <div class="badge">
+              <i class="fas fa-check-circle"></i> Dermatologically Tested
+            </div>
+            <div class="badge">
+              <i class="fas fa-award"></i> Winner Grooming Awards 2025
+            </div>
+            <div class="badge">
+              <i class="fas fa-shield-alt"></i> Cruelty-Free & Vegan
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BOTTOM CTA -->
+      <section class="bottom-cta" id="claim">
+        <div class="container">
+          <div class="product-showcase">
+            <div style="max-width: 260px">
+              <img
+                src="10.jpeg"
+                alt="PHARO SHAVE tube 50g"
+                onerror="
+                  this.src =
+                    'https://placehold.co/400x300/1F2A1C/D4AF37?text=PHARO+SHAVE+50g'
+                "
+              />
+            </div>
+            <div>
+              <div class="product-badge">
+                <i class="fas fa-weight-hanging"></i> Net Weight: 50g
+              </div>
+              <div class="price">
+                $24.99<span style="font-size: 1rem"> USD</span>
+              </div>
+              <p style="margin: 1rem 0">
+                Premium shaving cream • Smooth & Hydrating Formula for Sensitive
+                Skin
+              </p>
+              <p class="king-tagline">
+                <i class="fas fa-crown"></i> Shave Like a King 👑
+              </p>
+              <a href="#" class="btn-gold btn-large"
+                >ORDER YOUR PHARO TUBE NOW</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div>
+          <a href="#">Terms</a> | <a href="#">Privacy</a> |
+          <a href="#">Contact</a>
+          <p style="margin-top: 1rem">
+            © 2025 PHARO SHAVE — Made in Egypt. Shave Like a King.
+          </p>
+        </div>
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
