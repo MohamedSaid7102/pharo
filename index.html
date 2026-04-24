@@ -27,7 +27,7 @@
         <i class="fas fa-bars"></i>
       </div>
       <div class="nav-links" id="navLinks">
-        <a href="#how-it-works">How it Works</a>
+        <a href="scroller.html">How it Works</a>
         <a href="#ingredients">Key Ingredients</a>
         <a href="#reviews">Reviews</a>
         <a href="#shop" class="btn-gold" style="padding: 0.6rem 1.5rem"
@@ -63,145 +63,48 @@
       </section>
 
       <!-- HORIZONTAL IMAGE SLIDER (7 images from your collection) -->
-      <section class="gallery-slider-section" id="product-gallery">
-        <div class="container">
-          <div class="section-title">
-            <h2 class="gold-text">The PHARO Treasury</h2>
-            <p>
-              Witness the artifact in its glory — from golden tube to ritual
-              texture
-            </p>
+      <section id="mySlider">
+        <input type="radio" name="control" id="b1" checked />
+        <input type="radio" name="control" id="b2" />
+        <input type="radio" name="control" id="b3" />
+        <input type="radio" name="control" id="b4" />
+        <input type="radio" name="control" id="b5" />
+        <input type="radio" name="control" id="b6" />
+        <input type="radio" name="control" id="b7" />
+        <input type="radio" name="control" id="b8" />
+        <input type="radio" name="control" id="b9" />
+        <input type="radio" name="control" id="b10" />
+        <div class="content">
+          <div class="controls">
+            <label for="b1"></label>
+            <label for="b2"></label>
+            <label for="b3"></label>
+            <label for="b4"></label>
+            <label for="b5"></label>
+            <label for="b6"></label>
+            <label for="b7"></label>
+            <label for="b8"></label>
+            <label for="b9"></label>
+            <label for="b10"></label>
           </div>
-          <div class="slider-container">
-            <button class="slider-btn prev-btn" id="prevSlide">
-              <i class="fas fa-chevron-left"></i>
-            </button>
-            <div class="slider-track-wrapper">
-              <div class="slider-track" id="sliderTrack">
-                <div class="slide-item">
-                  <img
-                    src="1.jpeg"
-                    alt="PHARO SHAVE tube"
-                    onerror="
-                      this.src =
-                        'https://placehold.co/600x500/2B3A2B/D4AF37?text=Image+1'
-                    "
-                  />
-                </div>
-                <div class="slide-item">
-                  <img
-                    src="2.jpeg"
-                    alt="Cream texture"
-                    onerror="
-                      this.src =
-                        'https://placehold.co/600x500/3E2E2A/E8C87A?text=Image+2'
-                    "
-                  />
-                </div>
-                <div class="slide-item">
-                  <img
-                    src="3.jpeg"
-                    alt="Lathering process"
-                    onerror="
-                      this.src =
-                        'https://placehold.co/600x500/2A3A28/C9A94E?text=Image+3'
-                    "
-                  />
-                </div>
-                <div class="slide-item">
-                  <img
-                    src="4.jpeg"
-                    alt="Packaging details"
-                    onerror="
-                      this.src =
-                        'https://placehold.co/600x500/1F2C1C/D4AF37?text=Image+4'
-                    "
-                  />
-                </div>
-                <div class="slide-item">
-                  <img
-                    src="5.jpeg"
-                    alt="Ingredients natural"
-                    onerror="
-                      this.src =
-                        'https://placehold.co/600x500/3B2D24/F0CF6E?text=Image+5'
-                    "
-                  />
-                </div>
-                <div class="slide-item">
-                  <img
-                    src="6.jpeg"
-                    alt="Smooth glide shave"
-                    onerror="
-                      this.src =
-                        'https://placehold.co/600x500/2F3E2A/C9B36B?text=Image+6'
-                    "
-                  />
-                </div>
-                <div class="slide-item">
-                  <img
-                    src="7.jpeg"
-                    alt="Shave like a king"
-                    onerror="
-                      this.src =
-                        'https://placehold.co/600x500/41332A/E5BD5E?text=Image+7'
-                    "
-                  />
-                </div>
-              </div>
-            </div>
-            <button class="slider-btn next-btn" id="nextSlide">
-              <i class="fas fa-chevron-right"></i>
-            </button>
+          <div class="thumbnails">
+            <label for="b1"></label>
+            <label for="b2"></label>
+            <label for="b3"></label>
+            <label for="b4"></label>
+            <label for="b5"></label>
+            <label for="b6"></label>
+            <label for="b7"></label>
+            <label for="b8"></label>
+            <label for="b9"></label>
+            <label for="b10"></label>
           </div>
-          <div class="slider-dots" id="sliderDots"></div>
         </div>
-      </section>
 
-      <!-- BEFORE & AFTER Comparison Slider (using local images 8.jpeg and 9.jpeg) -->
-      <section class="before-after-section">
-        <div class="container">
-          <div class="section-title">
-            <h2 class="gold-text">Transformation Unveiled</h2>
-            <p>
-              Drag the handle to reveal the royal difference — sensitive dry
-              skin vs. PHARO SHAVE hydration
-            </p>
-          </div>
-          <div class="comparison-container">
-            <div class="comparison-image" id="comparisonImage">
-              <img
-                src="8.jpeg"
-                alt="Before skin condition"
-                class="comparison-before"
-                onerror="
-                  this.src =
-                    'https://placehold.co/900x500/5A4A3A/AB8E5C?text=BEFORE:+Irritated+Sensitive+Skin'
-                "
-              />
-              <div class="comparison-after-wrapper" id="afterWrapper">
-                <img
-                  src="9.jpeg"
-                  alt="After smooth skin"
-                  class="comparison-after"
-                  onerror="
-                    this.src =
-                      'https://placehold.co/900x500/2C4430/D4AF37?text=AFTER:+Hydrated+Smooth+Skin'
-                  "
-                />
-              </div>
-              <div class="comparison-handler" id="dragHandler">
-                <div class="handler-line"></div>
-                <div class="handler-circle">
-                  <i class="fas fa-arrows-alt-h"></i>
-                </div>
-              </div>
-            </div>
-            <p class="drag-hint">
-              <i class="fas fa-hand-peace"></i> Drag left/right to see the PHARO
-              SHAVE effect
-            </p>
-          </div>
+        <div class="firefox">
+          <span
+            >Sorry, <code>:has()</code> is not supported by this browser.</span
+          >
         </div>
       </section>
 
@@ -364,7 +267,7 @@
           <div class="product-showcase">
             <div style="max-width: 260px">
               <img
-                src="10.jpeg"
+                src="33.jpeg"
                 alt="PHARO SHAVE tube 50g"
                 onerror="
                   this.src =

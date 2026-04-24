@@ -204,6 +204,7 @@ nav {
 .hero-image {
   flex: 1;
   text-align: center;
+  min-width: 200px;
 }
 
 .hero-image img {
@@ -219,193 +220,6 @@ nav {
   gap: 1.5rem;
   margin-top: 2rem;
   flex-wrap: wrap;
-}
-
-/* Horizontal Image Slider - FIXED */
-.gallery-slider-section {
-  padding: 5rem 0;
-  background: #232f23;
-}
-
-.slider-container {
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.slider-track-wrapper {
-  overflow: hidden;
-  width: 100%;
-  border-radius: 24px;
-}
-
-.slider-track {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-  gap: 1.5rem;
-}
-
-.slide-item {
-  flex: 0 0 calc(33.333% - 1rem);
-  min-width: 280px;
-  border-radius: 24px;
-  overflow: hidden;
-}
-
-.slide-item img {
-  width: 100%;
-  height: 320px;
-  object-fit: cover;
-  border-radius: 24px;
-  border: 2px solid rgba(212, 175, 55, 0.4);
-  transition: transform 0.3s;
-}
-
-.slide-item:hover img {
-  transform: scale(1.03);
-}
-
-.slider-btn {
-  background: #d4af37;
-  border: none;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: all 0.3s;
-  color: #1e2a1e;
-  font-size: 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.slider-btn:hover {
-  background: #c49f2a;
-  transform: scale(1.1);
-}
-
-.slider-dots {
-  display: flex;
-  justify-content: center;
-  gap: 0.75rem;
-  margin-top: 2rem;
-}
-
-.dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: rgba(212, 175, 55, 0.4);
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-.dot.active {
-  background: #d4af37;
-  width: 28px;
-  border-radius: 10px;
-}
-
-@media (max-width: 768px) {
-  .slide-item {
-    flex: 0 0 calc(100% - 1rem);
-  }
-  .slider-btn {
-    width: 36px;
-    height: 36px;
-    font-size: 1rem;
-  }
-}
-
-/* Before & After Comparison Slider - FIXED */
-.before-after-section {
-  padding: 5rem 0;
-  background: #1e2a1e;
-}
-
-.comparison-container {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.comparison-image {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  border-radius: 24px;
-  border: 3px solid #d4af37;
-  cursor: ew-resize;
-  user-select: none;
-}
-
-.comparison-before {
-  width: 100%;
-  height: auto;
-  display: block;
-  pointer-events: none;
-}
-
-.comparison-after-wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 50%;
-  height: 100%;
-  overflow: hidden;
-}
-
-.comparison-after {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-  left: 0;
-  top: 0;
-  pointer-events: none;
-}
-
-.comparison-handler {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 4px;
-  height: 100%;
-  background: #d4af37;
-  transform: translateX(-50%);
-  cursor: ew-resize;
-  z-index: 10;
-}
-
-.handler-line {
-  width: 4px;
-  height: 100%;
-  background: #d4af37;
-}
-
-.handler-circle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 48px;
-  height: 48px;
-  background: #d4af37;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #1e2a1e;
-  font-size: 1.5rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-.drag-hint {
-  text-align: center;
-  margin-top: 1rem;
-  color: #d4af37;
-  font-size: 0.9rem;
 }
 
 /* Features Section */
@@ -436,7 +250,6 @@ nav {
   min-width: 220px;
   text-align: center;
   transition: all 0.3s ease;
-  opacity: 0;
   transform: translateY(35px);
 }
 
@@ -653,4 +466,288 @@ footer a {
   color: #d4af37;
   text-decoration: none;
   margin: 0 0.8rem;
+}
+
+/* External slider */
+
+#mySlider {
+  width: 100vw;
+  display: grid;
+  place-items: center;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.content {
+  width: 60vmin;
+  height: 60vmin;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center center;
+  background-image: var(--img, url(https://cdn.josetxu.com/img/gp-fisura-saqueadores.jpg));
+  transition: background 0.5s ease 0s;
+  max-width: 500px;
+  max-height: 500px;
+  box-shadow:
+    0 0 0vmin 1vmin #fff,
+    0 0 10vmin 5vmin #000;
+  border-radius: 2px;
+  z-index: 0;
+  background-color: #fff;
+}
+
+/* CONTROLS */
+.controls {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: absolute;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+label {
+  width: 50vw;
+  height: 100vh;
+  position: relative;
+  cursor: pointer;
+  opacity: 0.15;
+}
+
+label:hover {
+  opacity: 1;
+}
+
+input:first-child:checked ~ .content .controls label:first-child,
+input:last-of-type:checked ~ .content .controls label:last-of-type {
+  cursor: default;
+  opacity: 0.025;
+}
+
+/* HIDE LABELS */
+#b2:checked ~ .content .controls label[for="b2"],
+#b3:checked ~ .content .controls label[for="b3"],
+#b4:checked ~ .content .controls label[for="b4"],
+#b5:checked ~ .content .controls label[for="b5"],
+#b6:checked ~ .content .controls label[for="b6"],
+#b7:checked ~ .content .controls label[for="b7"],
+#b8:checked ~ .content .controls label[for="b8"],
+#b9:checked ~ .content .controls label[for="b9"],
+#b3:checked ~ .content .controls label[for="b1"],
+#b4:checked ~ .content .controls label[for="b1"],
+#b4:checked ~ .content .controls label[for="b2"],
+#b5:checked ~ .content .controls label[for="b1"],
+#b5:checked ~ .content .controls label[for="b2"],
+#b5:checked ~ .content .controls label[for="b3"],
+#b6:checked ~ .content .controls label[for="b1"],
+#b6:checked ~ .content .controls label[for="b2"],
+#b6:checked ~ .content .controls label[for="b3"],
+#b6:checked ~ .content .controls label[for="b4"],
+#b7:checked ~ .content .controls label[for="b1"],
+#b7:checked ~ .content .controls label[for="b2"],
+#b7:checked ~ .content .controls label[for="b3"],
+#b7:checked ~ .content .controls label[for="b4"],
+#b7:checked ~ .content .controls label[for="b5"],
+#b8:checked ~ .content .controls label[for="b1"],
+#b8:checked ~ .content .controls label[for="b2"],
+#b8:checked ~ .content .controls label[for="b3"],
+#b8:checked ~ .content .controls label[for="b4"],
+#b8:checked ~ .content .controls label[for="b5"],
+#b8:checked ~ .content .controls label[for="b6"],
+#b9:checked ~ .content .controls label[for="b1"],
+#b9:checked ~ .content .controls label[for="b2"],
+#b9:checked ~ .content .controls label[for="b3"],
+#b9:checked ~ .content .controls label[for="b4"],
+#b9:checked ~ .content .controls label[for="b5"],
+#b9:checked ~ .content .controls label[for="b6"],
+#b9:checked ~ .content .controls label[for="b7"],
+#b10:checked ~ .content .controls label[for="b1"],
+#b10:checked ~ .content .controls label[for="b2"],
+#b10:checked ~ .content .controls label[for="b3"],
+#b10:checked ~ .content .controls label[for="b4"],
+#b10:checked ~ .content .controls label[for="b5"],
+#b10:checked ~ .content .controls label[for="b6"],
+#b10:checked ~ .content .controls label[for="b7"],
+#b10:checked ~ .content .controls label[for="b8"] {
+  display: none;
+}
+
+/* ARROWS */
+label:before {
+  content: "";
+  position: absolute;
+  background:
+    linear-gradient(30deg, #fff0 60%, #fff calc(60% + 1px)),
+    linear-gradient(-30deg, #fff 40%, #fff0 calc(40% + 1px)),
+    linear-gradient(-90deg, #fff0 70%, #fff calc(70% + 1px));
+  width: 6vmin;
+  height: 6vmin;
+  border-radius: 5px;
+  right: 7vmin;
+  top: calc(50% - 3vmin);
+}
+
+/* LEFT ARROW */
+#b1:checked ~ .content .controls label[for="b1"]:before,
+#b2:checked ~ .content .controls label[for="b1"]:before,
+#b3:checked ~ .content .controls label[for="b2"]:before,
+#b4:checked ~ .content .controls label[for="b3"]:before,
+#b5:checked ~ .content .controls label[for="b4"]:before,
+#b6:checked ~ .content .controls label[for="b5"]:before,
+#b7:checked ~ .content .controls label[for="b6"]:before,
+#b8:checked ~ .content .controls label[for="b7"]:before,
+#b9:checked ~ .content .controls label[for="b8"]:before,
+#b10:checked ~ .content .controls label[for="b9"]:before {
+  left: 7vmin;
+  transform: rotate(180deg);
+}
+
+/*** THUMBNAILS ***/
+.thumbnails {
+  opacity: 0;
+  position: absolute;
+  background: #ffffff05;
+  width: 100vw;
+  bottom: 3vh;
+  text-align: center;
+  padding: 1vmin;
+}
+
+.thumbnails label {
+  background-color: #0008;
+  position: relative;
+  width: 8vmin;
+  height: 8vmin;
+  display: inline-block;
+  margin-left: 1vw;
+  background-image: var(--img);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5;
+  border-radius: 2px;
+}
+
+/* IMAGES / THUMBNAILS */
+body:has(input#b1:checked),
+.thumbnails label[for="b1"] {
+  --img: url(19.jpeg);
+}
+
+body:has(input#b2:checked),
+.thumbnails label[for="b2"] {
+  --img: url(9.jpeg);
+}
+
+body:has(input#b3:checked),
+.thumbnails label[for="b3"] {
+  --img: url(8.jpeg);
+}
+
+body:has(input#b4:checked),
+.thumbnails label[for="b4"] {
+  --img: url(7.jpeg);
+}
+
+body:has(input#b5:checked),
+.thumbnails label[for="b5"] {
+  --img: url(6.jpeg);
+}
+
+body:has(input#b6:checked),
+.thumbnails label[for="b6"] {
+  --img: url(5.jpeg);
+}
+
+body:has(input#b7:checked),
+.thumbnails label[for="b7"] {
+  --img: url(4.jpeg);
+}
+
+body:has(input#b8:checked),
+.thumbnails label[for="b8"] {
+  --img: url(3.jpeg);
+}
+
+body:has(input#b9:checked),
+.thumbnails label[for="b9"] {
+  --img: url(2.jpeg);
+}
+
+body:has(input#b10:checked),
+.thumbnails label[for="b10"] {
+  --img: url(1.jpeg);
+}
+
+.thumbnails label:before {
+  display: none;
+}
+.thumbnails label:hover {
+  opacity: 1;
+}
+.thumbnails label:first-child {
+  margin-left: 0;
+}
+
+#b1:checked ~ .content .thumbnails label[for="b1"],
+#b2:checked ~ .content .thumbnails label[for="b2"],
+#b3:checked ~ .content .thumbnails label[for="b3"],
+#b4:checked ~ .content .thumbnails label[for="b4"],
+#b5:checked ~ .content .thumbnails label[for="b5"],
+#b6:checked ~ .content .thumbnails label[for="b6"],
+#b7:checked ~ .content .thumbnails label[for="b7"],
+#b8:checked ~ .content .thumbnails label[for="b8"],
+#b9:checked ~ .content .thumbnails label[for="b9"],
+#b10:checked ~ .content .thumbnails label[for="b10"] {
+  opacity: 1;
+  box-shadow: 0 0 0.01vmin 0.5vmin #fff;
+}
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 767px) {
+  body:after {
+    top: 2vh;
+    font-size: 20px;
+    white-space: initial;
+  }
+}
+
+@media only screen and (max-width: 580px) {
+  body:after {
+    font-size: 25px;
+    white-space: pre-wrap;
+  }
+}
+
+/* BROWSER SUPPORT */
+.firefox {
+  background: #0008;
+  color: #fff;
+  position: absolute;
+  top: 45vh;
+  width: 45vmin;
+  padding: 2vmin 3vmin;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 24px;
+}
+
+.firefox span code {
+  font-size: 24px;
+  background: #0008;
+  padding: 0 10px;
+  border-radius: 25px;
+}
+
+@supports (-webkit-font-smoothing: antialiased) {
+  .firefox {
+    display: none;
+  }
 }
