@@ -222,6 +222,10 @@ nav {
   flex-wrap: wrap;
 }
 
+#hero-title{
+margin-top: 2rem;
+}
+
 /* Features Section */
 .features {
   padding: 5rem 0;
